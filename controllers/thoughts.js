@@ -50,9 +50,8 @@ const thoughtFuncs = {
 
     //updated a thought when passed id param
     updateThought(req, res) {
-        Thought.findOneAndUpdate({ _id: req.params.id }, req.body,)
-            .then(query => res.json(query))
-            .save();
+        Thought.findOneAndUpdate({ _id: req.params.id }, req.body, {new: true})
+            .then(query => res.json(query));
     },
 
     //delete thoughts

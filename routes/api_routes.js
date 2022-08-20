@@ -13,7 +13,9 @@ const { createUser,
     getUsers,
     getUserById,
     updateUser,
-    deleteUser
+    deleteUser,
+    createFriend,
+    deleteFriend
 } = require('../controllers/users')
 
 //all queries on /users routes
@@ -28,6 +30,12 @@ router
     .get(getUserById)
     .put(updateUser)
     .delete(deleteUser);
+
+//query to add/delete friend
+router
+    .route('/users/:id/friends/:frId')
+    .post(createFriend)
+    .delete(deleteFriend);
 
 //all queries on /thoughts routes
 router

@@ -25,7 +25,8 @@ const userFuncs = {
     getUserById(req, res) {
         User.findOne({_id: req.params.id})
             .populate({
-                path: 'thoughts'
+                path: 'thoughts',
+                path: 'friends'
             }).then(query => res.json(query));
     },
 
@@ -45,6 +46,36 @@ const userFuncs = {
                 })
                     .then(query => res.json(query));
             })
+    },
+
+    //add a friend
+    createFriend(req, res){
+        User.findOneAndUpdate(
+            {
+                _id: req.params.id
+            },
+            {
+                $push: {friends: req.params.frId}
+            },
+            {
+                new: true
+            }
+        ).then(query => res.json(query));
+    },
+
+    //delete a friend
+    deleteFriend(req, res){
+        User.findOneAndUpdate(
+            {
+                _id: req.params.id
+            },
+            {
+                $pull: {friends: req.params.frId}
+            },
+            {
+                new: true
+            }
+        ).then(query => res.json(query))
     }
 }
 
