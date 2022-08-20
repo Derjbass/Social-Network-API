@@ -1,0 +1,63 @@
+### CREATE USER
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "Derek",
+    "email": "Derek@test.com"
+}
+
+### CREATE THOUGHT
+
+POST http://localhost:3001/api/thoughts
+Content-Type: application/json
+
+{
+    "thoughtText": "Test thought content",
+    "userId": "63012139ca944e600d4612e7",
+    "username": "Derek"
+}
+
+### UPDATE THOUGHT
+
+PUT http://localhost:3001/api/thoughts/63012581b7aed45474cac0bc
+Content-Type: application/json
+
+{
+    "thoughtText": "Updated again test thought content"
+}
+
+### GET ALL THOUGHTS
+
+GET http://localhost:3001/api/thoughts
+
+### GET THOUGHT BY ID
+
+GET http://localhost:3001/api/thoughts/63012581b7aed45474cac0bc
+
+### CREATE REACTION
+
+POST http://localhost:3001/api/63012581b7aed45474cac0bc/reactions
+Content-Type: application/json
+
+{
+    "reactionBody": "AGAIN AGAIN OMG!"
+}
+
+### DELETE REACTION
+
+### DELETE THOUGHT
+DELETE http://localhost:3001/api/thoughts/63012581b7aed45474cac0bc
+
+### GET ALL USERS
+GET http://localhost:3001/api/users
+
+### GET USER BY ID
+
+### UPDATE USER
+
+### CREATE FRIEND
+
+### DELETE FRIEND
+
+### DELETE USER
