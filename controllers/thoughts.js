@@ -43,23 +43,23 @@ const thoughtFuncs = {
                         new: true
                     }
                 )
-            }).then(data => {
-                res.json(data)
+            }).then(query => {
+                res.json(query)
             })
     },
 
     //updated a thought when passed id param
     updateThought(req, res) {
         Thought.findOneAndUpdate({ _id: req.params.id }, req.body,)
-            .then(data => res.json(data))
+            .then(query => res.json(query))
             .save();
     },
 
     //delete thoughts
     deleteThought(req, res) {
         Thought.findOneAndDelete(req.params.id)
-            .then(data => {
-                if (!data) return res.json({ message: 'no thoughts found to delete' })
+            .then(query => {
+                if (!query) return res.json({ message: 'no thoughts found to delete' })
 
                 return User.findOneAndUpdate(
                     {
@@ -91,8 +91,8 @@ const thoughtFuncs = {
         ).populate({
             path: 'reactions',
             select: '-__v'
-        }).then(data => {
-                res.json(data);
+        }).then(query => {
+                res.json(query);
             })
     },
 
@@ -105,7 +105,7 @@ const thoughtFuncs = {
             {
                 $pull: { reactions: { reactionId: req.params.reacId } }
             }
-        ).then(data => res.json(data));
+        ).then(query => res.json(query));
     }
 
 }

@@ -54,7 +54,17 @@ GET http://localhost:3001/api/users
 
 ### GET USER BY ID
 
+GET http://localhost:3001/api/users/63012139ca944e600d4612e7
+
 ### UPDATE USER
+
+PUT http://localhost:3001/api/users/63012139ca944e600d4612e7
+Content-Type: application/json
+
+{
+    "user_name": "Kate",
+    "email": "Kate@test.com"
+}
 
 ### CREATE FRIEND
 

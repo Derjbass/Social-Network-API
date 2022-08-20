@@ -9,7 +9,9 @@ const { createThought,
     thoughtById
 } = require('../controllers/thoughts');
 const { createUser,
-    getUsers
+    getUsers,
+    getUserById,
+    updateUser
 } = require('../controllers/users')
 
 //all queries on /users routes
@@ -21,6 +23,8 @@ router
 //all queries on /users routes with params
 router
     .route('/users/:id')
+    .get(getUserById)
+    .put(updateUser);
 
 //all queries on /thoughts routes
 router
