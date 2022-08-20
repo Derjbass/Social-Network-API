@@ -6,12 +6,14 @@ const { createThought,
     createReaction,
     deleteReaction,
     allThoughts,
-    thoughtById
+    thoughtById,
+    deleteThought
 } = require('../controllers/thoughts');
 const { createUser,
     getUsers,
     getUserById,
-    updateUser
+    updateUser,
+    deleteUser
 } = require('../controllers/users')
 
 //all queries on /users routes
@@ -24,7 +26,8 @@ router
 router
     .route('/users/:id')
     .get(getUserById)
-    .put(updateUser);
+    .put(updateUser)
+    .delete(deleteUser);
 
 //all queries on /thoughts routes
 router
@@ -36,7 +39,8 @@ router
 router
     .route('/thoughts/:id')
     .put(updateThought)
-    .get(thoughtById);
+    .get(thoughtById)
+    .delete(deleteThought);
 
 //all queries on /reactions routes
 router

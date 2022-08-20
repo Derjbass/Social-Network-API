@@ -32,7 +32,19 @@ const userFuncs = {
     //update user
     updateUser(req, res) {
         User.findOneAndUpdate({_id: req.params.id}, req.body, {new:true})
-            .then(query => res.json(query))
+            .then(query => res.json(query));
+    },
+    
+    //delete user
+    deleteUser(req, res) {
+        Thought.deleteMany({ userId: req.params.id })
+            .then(() => {
+                User.findOneAndDelete({ 
+                    userId: req.params.id, 
+                    new: true
+                })
+                    .then(query => res.json(query));
+            })
     }
 }
 

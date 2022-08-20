@@ -15,7 +15,7 @@ Content-Type: application/json
 {
     "thoughtText": "Test thought content",
     "userId": "63012139ca944e600d4612e7",
-    "username": "Derek"
+    "username": "Kate"
 }
 
 ### UPDATE THOUGHT
@@ -49,9 +49,11 @@ Content-Type: application/json
 DELETE http://localhost:3001/api/63012581b7aed45474cac0bc/reactions/63013c6b8d3f63199010ff18
 
 ### DELETE THOUGHT
+
 DELETE http://localhost:3001/api/thoughts/63012581b7aed45474cac0bc
 
 ### GET ALL USERS
+
 GET http://localhost:3001/api/users
 
 ### GET USER BY ID
@@ -73,3 +75,5 @@ Content-Type: application/json
 ### DELETE FRIEND
 
 ### DELETE USER
+
+DELETE http://localhost:3001/api/users/63012139ca944e600d4612e7

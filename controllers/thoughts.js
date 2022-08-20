@@ -63,7 +63,7 @@ const thoughtFuncs = {
 
                 return User.findOneAndUpdate(
                     {
-                        _id: request.params.userId
+                        _id: req.params.userId
                     },
                     {
                         $pull: { thoughts: req.params.id }
