@@ -43,8 +43,9 @@ router
     .route('/:id/reactions')
     .post(createReaction);
 
-//all quires on /reactions routes with params
+//all queries on /reactions routes with params
 router
-    .route('/:id/reaction/:reacId')
+    .route('/:id/reactions/:reacId')
     .delete(deleteReaction);
+
 module.exports = router;

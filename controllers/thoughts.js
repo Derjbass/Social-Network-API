@@ -104,6 +104,9 @@ const thoughtFuncs = {
             },
             {
                 $pull: { reactions: { reactionId: req.params.reacId } }
+            },
+            {
+                new: true
             }
         ).then(query => res.json(query));
     }

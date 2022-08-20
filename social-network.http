@@ -46,6 +46,8 @@ Content-Type: application/json
 
 ### DELETE REACTION
 
+DELETE http://localhost:3001/api/63012581b7aed45474cac0bc/reactions/63013c6b8d3f63199010ff18
+
 ### DELETE THOUGHT
 DELETE http://localhost:3001/api/thoughts/63012581b7aed45474cac0bc
 
