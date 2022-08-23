@@ -3,8 +3,8 @@ POST http://localhost:3001/api/users
 Content-Type: application/json
 
 {
-    "username": "Charlie",
-    "email": "charles@test.com"
+    "username": "Kent",
+    "email": "kent@test.com"
 }
 
 ### CREATE THOUGHT
@@ -14,14 +14,14 @@ Content-Type: application/json
 
 {
     "thoughtText": "Test thought content",
-    "userId": "63014f9d6baeed562f464915",
-    "username": "Kate"
+    "userId": "6305390f4fd0051d423d23a7",
+    "username": "Kent"
     
 }
 
 ### UPDATE THOUGHT
 
-PUT http://localhost:3001/api/thoughts/630150aba5531403a6c160ca
+PUT http://localhost:3001/api/thoughts/6305391c4fd0051d423d23a9
 Content-Type: application/json
 
 {
@@ -34,11 +34,11 @@ GET http://localhost:3001/api/thoughts
 
 ### GET THOUGHT BY ID
 
-GET http://localhost:3001/api/thoughts/63015040cac24304a22ca682
+GET http://localhost:3001/api/thoughts/6305391c4fd0051d423d23a9
 
 ### CREATE REACTION
 
-POST http://localhost:3001/api/63015040cac24304a22ca682/reactions
+POST http://localhost:3001/api/6305391c4fd0051d423d23a9/reactions
 Content-Type: application/json
 
 {
@@ -47,7 +47,7 @@ Content-Type: application/json
 
 ### DELETE REACTION
 
-DELETE http://localhost:3001/api/63015040cac24304a22ca682/reactions/630150f7a5531403a6c160d1
+DELETE http://localhost:3001/api/6305391c4fd0051d423d23a9/reactions/6305394d4fd0051d423d23b0
 
 ### DELETE THOUGHT
 
@@ -59,26 +59,26 @@ GET http://localhost:3001/api/users
 
 ### GET USER BY ID
 
-GET http://localhost:3001/api/users/63014f9d6baeed562f464915
+GET http://localhost:3001/api/users/6305390f4fd0051d423d23a7
 
 ### UPDATE USER
 
-PUT http://localhost:3001/api/users/63012139ca944e600d4612e7
+PUT http://localhost:3001/api/users/6305390f4fd0051d423d23a7
 Content-Type: application/json
 
 {
-    "username": "Kate",
-    "email": "Kate@test.com"
+    "username": "John",
+    "email": "John@test.com"
 }
 
 ### CREATE FRIEND
 
-POST http://localhost:3001/api/users/63014f9d6baeed562f464915/friends/63014fb46baeed562f464917
+POST http://localhost:3001/api/users/6305390f4fd0051d423d23a7/friends/63014fb46baeed562f464917
 
 ### DELETE FRIEND
 
-DELETE http://localhost:3001/api/users/63014f9d6baeed562f464915/friends/63014fb46baeed562f464917
+DELETE http://localhost:3001/api/users/6305390f4fd0051d423d23a7/friends/63014fb46baeed562f464917
 
 ### DELETE USER
 
-DELETE http://localhost:3001/api/users/63012139ca944e600d4612e7
+DELETE http://localhost:3001/api/users/63014fb46baeed562f464917
